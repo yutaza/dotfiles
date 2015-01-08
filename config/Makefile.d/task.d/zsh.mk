@@ -3,6 +3,7 @@ $(ZSH_DIR):
 
 $(OH_MY_ZSH): $(ZSH_DIR)
 	git clone git://github.com/robbyrussell/oh-my-zsh.git $(OH_MY_ZSH)
+	chsh -s /bin/zsh
 
 $(DOT_OH_MY_ZSH):
 	ln -sf $(OH_MY_ZSH) $(DOT_OH_MY_ZSH)
