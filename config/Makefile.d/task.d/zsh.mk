@@ -14,8 +14,3 @@ zsh-clean:
 
 .PHONY: zsh-install
 zsh-install: $(OH_MY_ZSH) $(DOT_OH_MY_ZSH)
-
-.PHONY: zsh-update
-zsh-update: zsh-install
-	cd $(OH_MY_ZSH)
-	git pull
