@@ -1,0 +1,1 @@
+UPDATE_ENV_COMMAND = $(BIN_DIR)/update-env

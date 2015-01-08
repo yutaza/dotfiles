@@ -4,4 +4,6 @@ DATA_DIR = data
 VAR_DIR = var
 
 ALL_TARGETS += build
-BUILD_TARGETS += update-env
+BUILD_TARGETS += initialize
+INITIALIZE_TARGETS += install
+INSTALL_TARGETS +=

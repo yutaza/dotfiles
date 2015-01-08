@@ -1,3 +1,3 @@
 .PHONY: update-env
 update-env:
-	$(BIN_DIR)/update-env
+	$(UPDATE_ENV_COMMAND)
