@@ -1,2 +1,2 @@
 CLEAN_TARGETS += dotenv-clean
-INITIALIZE_TARGETS += dotenv-update
+UPDATE_TARGETS += dotenv-update

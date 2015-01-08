@@ -1,12 +1,13 @@
-BIN_DIR = bin
-CONFIG_DIR = config
-DATA_DIR = data
-ETC_DIR = etc
-VAR_DIR = var
+BIN_DIR = $(TOP_DIR)/bin
+CONFIG_DIR = $(TOP_DIR)/config
+DATA_DIR = $(TOP_DIR)/data
+ETC_DIR = $(TOP_DIR)/etc
+VAR_DIR = $(TOP_DIR)/var
 
-ALL_TARGETS += build
+ALL_TARGETS += update
 BUILD_TARGETS += initialize
 CLEAN_TARGETS +=
 DISTCLEAN_TARGETS += clean
 INITIALIZE_TARGETS += install
 INSTALL_TARGETS +=
+UPDATE_TARGETS += build

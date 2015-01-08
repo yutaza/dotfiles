@@ -12,3 +12,6 @@ build: $(INITIALIZE_TARGETS)
 
 .PHONY: install
 install: $(INSTALL_TARGETS)
+
+.PHONY: update
+update: $(UPDATE_TARGETS)
