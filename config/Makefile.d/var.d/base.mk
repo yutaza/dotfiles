@@ -1,6 +1,7 @@
 BIN_DIR = bin
 CONFIG_DIR = config
 DATA_DIR = data
+ETC_DIR = etc
 VAR_DIR = var
 
 ALL_TARGETS += build
