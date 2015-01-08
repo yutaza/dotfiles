@@ -1,1 +1,2 @@
-UPDATE_ENV_COMMAND = $(BIN_DIR)/update-env
+DOTENV_CLEAN_COMMAND = $(BIN_DIR)/dotenv clean
+DOTENV_UPDATE_COMMAND = $(BIN_DIR)/dotenv update

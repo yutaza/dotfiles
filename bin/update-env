@@ -1,7 +1,0 @@
-#!/bin/sh
-source $(dirname $0)/.init.sh
-
-for f in $ETC_DIR/*; do
-  base=$(basename $f)
-  xln $f $HOME/.$base
-done

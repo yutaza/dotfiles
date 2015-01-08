@@ -1,0 +1,24 @@
+#!/bin/sh
+source $(dirname $0)/.init.sh
+
+function update()
+{
+    for f in $ETC_DIR/*; do
+        base=$(basename $f)
+        xln $f $HOME/.$base
+    done
+}
+
+function clean()
+{
+    for f in $ETC_DIR/*; do
+        base=$(basename $f)
+        rm $HOME/.$base
+    done
+}
+
+#main
+case $1 in
+    update ) update ;;
+    clean ) clean ;;
+esac
