@@ -6,4 +6,7 @@ path=(
     $path
 )
 
-eval "$(phpenv init -)"
+check=$(which phpenv)
+if [[ ${?} -ne 0 ]]; then
+    eval "$(phpenv init -)"
+fi
