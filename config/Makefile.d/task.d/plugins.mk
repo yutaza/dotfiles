@@ -1,2 +1,5 @@
 $(PLUGINS_GIT_DIR):
 	@mkdir -p $(PLUGINS_GIT_DIR)
+
+$(PLUGINS_ZSH_DIR):
+	@mkdir -p $(PLUGINS_ZSH_DIR)

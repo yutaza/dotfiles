@@ -1,10 +1,12 @@
 #!/bin/sh
 source $(dirname $0)/.init.sh
 
+TIG_DIR=$PLUGINS_DIR/git/tig
+
 function build()
 {
-    cd $PLUGINS_DIR/git/tig
-    git checkout $1
+    cd $TIG_DIR
+    git reset --hard $1
     make distclean
 }
 
