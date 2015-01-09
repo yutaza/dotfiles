@@ -1,9 +1,13 @@
 $(TIG_DIR): $(PLUGINS_GIT_DIR)
-	git clone git://github.com/jonas/tig.git $(TIG_DIR)
+	git clone $(TIG_REPO) $@
 
 $(TIG_LAST_BUILD): $(TIG_DIR) $(TIG_VAR_MK)
-	@rm -f $@
-	$(TIG_BUILD_COMMAND) tig-$(TIG_VERSION)
+	@rm -rf $@
+	git -C $(TIG_DIR) reset --hard tig-$(TIG_VERSION)
+	make --directory=$(TIG_DIR) distclean
+	make --directory=$(TIG_DIR) prefix=$(TIG_DIR)
+	make --directory=$(TIG_DIR) install prefix=$(TIG_DIR)
+	ln -sf $(TIG_DIR)/bin/tig $(BIN_DIR)/tig
 	touch $@
 
 .PHONY: tig-build
