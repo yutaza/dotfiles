@@ -1,6 +1,6 @@
-TOP_DIR = $(shell pwd)
 include ./config/Makefile.d/var.d/*.mk
 include ./config/Makefile.d/register.d/dotenv.mk
 include ./config/Makefile.d/register.d/oh-my-zsh.mk
+include ./config/Makefile.d/register.d/phpenv.mk
 include ./config/Makefile.d/register.d/tig.mk
 include ./config/Makefile.d/task.d/*.mk
