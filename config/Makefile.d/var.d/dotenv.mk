@@ -1,2 +1,1 @@
-DOTENV_BUILD_COMMAND = $(BIN_DIR)/dotenv build
-DOTENV_DISTCLEAN_COMMAND = $(BIN_DIR)/dotenv distclean
+DOTFILES_DIR = ~/.dotfiles
