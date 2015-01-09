@@ -6,7 +6,6 @@ path=(
     $path
 )
 
-check=$(which phpenv)
-if [[ ${?} -ne 0 ]]; then
+if hash phpenv 2>/dev/null; then
     eval "$(phpenv init -)"
 fi
