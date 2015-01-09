@@ -12,6 +12,7 @@ tig-build: $(TIG_LAST_BUILD)
 .PHONY: tig-clean
 tig-clean:
 	@rm -rf $(TIG_DIR)
+	@rm -rf $(BIN_DIR)/tig
 
 .PHONY: tig-install
 tig-install: $(TIG_DIR)

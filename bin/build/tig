@@ -12,5 +12,11 @@ function build()
     make install prefix=$TIG_DIR
 }
 
+function make_symbolick_link()
+{
+    xln $TIG_DIR/bin/tig $BIN_DIR/tig
+}
+
 #main
 build $1
+make_symbolick_link
