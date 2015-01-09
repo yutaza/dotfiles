@@ -1,0 +1,11 @@
+#!/bin/sh
+source $(dirname $0)/.init.sh
+
+function update()
+{
+    cd $VAR_DIR/git/tig
+    git checkout $1
+}
+
+#main
+update $1
