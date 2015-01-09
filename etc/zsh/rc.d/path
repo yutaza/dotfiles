@@ -2,5 +2,6 @@ path=(
     $HOME/bin(N-/)
     /usr/local/bin(N-/)
     $HOME/.dotfiles/bin(N-/)
+    $HOME/.phpenv/bin(N-/)
     $path
 )

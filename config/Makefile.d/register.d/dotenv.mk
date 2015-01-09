@@ -1,2 +1,2 @@
-CLEAN_TARGETS += dotenv-clean
-UPDATE_TARGETS += dotenv-update
+BUILD_TARGETS += dotenv-build
+DISTCLEAN_TARGETS += dotenv-distclean

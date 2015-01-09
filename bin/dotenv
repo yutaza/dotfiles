@@ -1,7 +1,7 @@
 #!/bin/sh
 source $(dirname $0)/.init.sh
 
-function clean()
+function distclean()
 {
     for f in $ETC_DIR/*; do
         base=$(basename $f)
@@ -11,7 +11,7 @@ function clean()
     rm -rf $HOME/.dotfiles
 }
 
-function update()
+function build()
 {
     for f in $ETC_DIR/*; do
         base=$(basename $f)
@@ -23,6 +23,6 @@ function update()
 
 #main
 case $1 in
-    update ) update ;;
-    clean ) clean ;;
+    build ) build ;;
+    distclean ) distclean ;;
 esac

@@ -9,8 +9,8 @@ $(TIG_LAST_BUILD): $(TIG_DIR) $(TIG_VAR_MK)
 .PHONY: tig-build
 tig-build: $(TIG_LAST_BUILD)
 
-.PHONY: tig-clean
-tig-clean:
+.PHONY: tig-distclean
+tig-distclean:
 	@rm -rf $(TIG_DIR)
 	@rm -rf $(BIN_DIR)/tig
 

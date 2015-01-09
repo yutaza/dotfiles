@@ -1,4 +1,2 @@
-DOTENV_BIN = .bin-dotfiles
-
-DOTENV_CLEAN_COMMAND = $(BIN_DIR)/dotenv clean
-DOTENV_UPDATE_COMMAND = $(BIN_DIR)/dotenv update
+DOTENV_BUILD_COMMAND = $(BIN_DIR)/dotenv build
+DOTENV_DISTCLEAN_COMMAND = $(BIN_DIR)/dotenv distclean
