@@ -3,7 +3,7 @@ $(OH_MY_ZSH_DIR):
 
 .PHONY: oh-my-zsh-distclean
 oh-my-zsh-distclean:
-	rm -rf $(OH_MY_ZSH_DIR)
+	$(RM) $(OH_MY_ZSH_DIR)
 
 .PHONY: oh-my-zsh-install
 oh-my-zsh-install: $(OH_MY_ZSH_DIR)

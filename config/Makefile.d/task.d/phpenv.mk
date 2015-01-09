@@ -7,8 +7,8 @@ $(PHP_BUILD_DIR):
 
 .PHONY: phpenv-distclean
 phpenv-distclean:
-	rm -rf $(PHPENV_DIR)
-	rm -rf $(VAR_PHPENV_DIR)
+	$(RM) $(PHPENV_DIR)
+	$(RM) $(VAR_PHPENV_DIR)
 
 .PHONY: phpenv-install
 phpenv-install: $(VAR_PHPENV_DIR) $(PHP_BUILD_DIR)
