@@ -3,4 +3,3 @@ ZSH_THEME="steeef"
 ZSH_COMPDUMP=${ZDOTDIR:-${HOME}}/.zcompdump
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
-export PATH=$HOME/bin:/usr/local/bin:$PATH

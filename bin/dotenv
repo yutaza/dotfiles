@@ -7,6 +7,8 @@ function clean()
         base=$(basename $f)
         rm -rf $HOME/.$base
     done
+
+    rm -rf $HOME/.bin-dotfiles
 }
 
 function update()
@@ -15,6 +17,8 @@ function update()
         base=$(basename $f)
         xln $f $HOME/.$base
     done
+
+    xln $BIN_DIR $HOME/.bin-dotfiles
 }
 
 #main
