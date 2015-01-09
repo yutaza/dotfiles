@@ -8,7 +8,7 @@ function clean()
         rm -rf $HOME/.$base
     done
 
-    rm -rf $HOME/.bin-dotfiles
+    rm -rf $HOME/.dotfiles
 }
 
 function update()
@@ -18,7 +18,7 @@ function update()
         xln $f $HOME/.$base
     done
 
-    xln $BIN_DIR $HOME/.bin-dotfiles
+    xln $TOP_DIR $HOME/.dotfiles
 }
 
 #main

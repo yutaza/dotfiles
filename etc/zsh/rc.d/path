@@ -1,1 +1,6 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.bin-dotfiles
+path=(
+    $HOME/bin(N-/)
+    /usr/local/bin(N-/)
+    $HOME/.dotfiles/bin(N-/)
+    $path
+)
