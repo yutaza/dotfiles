@@ -5,3 +5,5 @@ path=(
     $HOME/.phpenv/bin(N-/)
     $path
 )
+
+eval "$(phpenv init -)"
