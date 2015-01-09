@@ -1,0 +1,2 @@
+$(PLUGINS_GIT_DIR):
+	@mkdir -p $(PLUGINS_GIT_DIR)

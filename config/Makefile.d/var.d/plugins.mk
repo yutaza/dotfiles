@@ -1,0 +1,1 @@
+PLUGINS_GIT_DIR = $(PLUGINS_DIR)/git

@@ -1,7 +1,3 @@
-
-$(PLUGINS_GIT_DIR):
-	@mkdir -p $(PLUGINS_GIT_DIR)
-
 $(TIG_DIR): $(PLUGINS_GIT_DIR)
 	git clone git://github.com/jonas/tig.git $(TIG_DIR)
 
