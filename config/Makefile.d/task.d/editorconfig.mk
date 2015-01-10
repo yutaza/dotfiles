@@ -1,13 +1,19 @@
 $(EDITORCONFIG_DIR): $(PLUGINS_VIM_DIR)
 	git clone $(EDITORCONFIG_REPO) $@
 
+#TODO: check update
 $(EDITORCONFIG_LAST_BUILD): $(EDITORCONFIG_DIR) $(EDITORCONFIG_VAR_MK)
 	$(RM) $@
-	git -C $(EDITORCONFIG_DIR) reset --hard v$(EDITORCONFIG_VERSION)
+	$(EDITORCONFIG_GIT_COMMAND) fetch -p
+	$(EDITORCONFIG_GIT_COMMAND) reset --hard $(EDITORCONFIG_GIT_TAG)
 	touch $@
 
 .PHONY: editorconfig-build
 editorconfig-build: $(EDITORCONFIG_LAST_BUILD)
+
+.PHONY: editorconfig-clean
+editorconfig-clean:
+	$(RM) $(EDITORCONFIG_LAST_BUILD)
 
 .PHONY: editorconfig-distclean
 editorconfig-distclean:
@@ -15,3 +21,6 @@ editorconfig-distclean:
 
 .PHONY: editorconfig-install
 editorconfig-install: $(EDITORCONFIG_DIR)
+
+.PHONY: editorconfig-update
+editorconfig-update: editorconfig-clean editorconfig-update
