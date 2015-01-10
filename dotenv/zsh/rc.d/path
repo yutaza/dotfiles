@@ -3,9 +3,15 @@ path=(
     /usr/local/bin(N-/)
     $HOME/.bin(N-/)
     $HOME/.phpenv/bin(N-/)
+    $HOME/.pyenv/bin(N-/)
     $path
 )
 
 if hash phpenv 2>/dev/null; then
     eval "$(phpenv init -)"
+fi
+
+if hash phpenv 2>/dev/null; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
 fi
