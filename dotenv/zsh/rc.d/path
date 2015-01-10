@@ -1,9 +1,10 @@
 path=(
     $HOME/bin(N-/)
-    /usr/local/bin(N-/)
-    $HOME/.bin(N-/)
     $HOME/.phpenv/bin(N-/)
     $HOME/.pyenv/bin(N-/)
+    $HOME/.bin(N-/)
+    /usr/local/bin(N-/)
+    /usr/bin(N-/)
     $path
 )
 
