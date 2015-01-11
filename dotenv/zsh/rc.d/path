@@ -1,11 +1,12 @@
 path=(
     $HOME/bin(N-/)
+    $HOME/.dotfiles/var/homebrew/bin(N-/)
+    $HOME/.dotfiles/var/plugins/git/tig/bin(N-/)
     $HOME/.phpenv/bin(N-/)
     $HOME/.pyenv/bin(N-/)
-    $HOME/.bin(N-/)
     /usr/local/bin(N-/)
     /usr/bin(N-/)
-    $path
+    ${^path}(N-/^W)
 )
 
 if hash phpenv 2>/dev/null; then
