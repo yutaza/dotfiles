@@ -9,7 +9,6 @@ $(TIG_LAST_BUILD): $(TIG_DIR) $(TIG_VAR_MK)
 	make --directory=$(TIG_DIR) distclean
 	make --directory=$(TIG_DIR) prefix=$(TIG_DIR)
 	make --directory=$(TIG_DIR) install prefix=$(TIG_DIR)
-	$(XLN) $(TIG_VAR_BIN) $(TIG_BIN)
 	touch $@
 
 .PHONY: tig-build
@@ -18,7 +17,6 @@ tig-build: $(TIG_LAST_BUILD)
 .PHONY: tig-clean
 tig-clean:
 	$(RM) $(TIG_LAST_BUILD)
-	$(RM) $(TIG_BIN)
 
 .PHONY: tig-distclean
 tig-distclean:
