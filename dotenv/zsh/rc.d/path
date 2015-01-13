@@ -1,6 +1,7 @@
 path=(
     $HOME/bin(N-/)
     $HOME/.dotfiles/var/homebrew/bin(N-/)
+    $HOME/.dotfiles/var/ansible/bin(N-/)
     $HOME/.dotfiles/var/plugins/git/tig/bin(N-/)
     $HOME/.phpenv/bin(N-/)
     $HOME/.pyenv/bin(N-/)
