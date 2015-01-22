@@ -1,6 +1,6 @@
 HOMEBREW_DIR = $(VAR_DIR)/homebrew
 
-HOMEBREW_GIT_COMMAND = git -C $(HOMEBREW_DIR)
+HOMEBREW_GIT_COMMAND = git --git-dir=$(HOMEBREW_DIR)/.git --work-tree=$(HOMEBREW_DIR)
 HOMEBREW_LAST_BUILD = $(HOMEBREW_DIR)/.homebrew-last-build
 HOMEBREW_REPO = git://github.com/Homebrew/homebrew.git
 HOMEBREW_TAG_PREFIX =

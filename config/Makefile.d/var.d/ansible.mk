@@ -1,6 +1,6 @@
 ANSIBLE_DIR = $(VAR_DIR)/ansible
 
-ANSIBLE_GIT_COMMAND = git -C $(ANSIBLE_DIR)
+ANSIBLE_GIT_COMMAND = git --git-dir=$(ANSIBLE_DIR)/.git --work-tree=$(ANSIBLE_DIR)
 ANSIBLE_LAST_BUILD = $(ANSIBLE_DIR)/.ansible-last-build
 ANSIBLE_REPO = git://github.com/ansible/ansible
 ANSIBLE_TAG_PREFIX = v

@@ -1,6 +1,6 @@
 TIG_DIR = $(PLUGINS_GIT_DIR)/tig
 
-TIG_GIT_COMMAND = git -C $(TIG_DIR)
+TIG_GIT_COMMAND = git --git-dir=$(TIG_DIR)/.git --work-tree=$(TIG_DIR)
 TIG_LAST_BUILD = $(TIG_DIR)/.tig-last-build
 TIG_REPO = git://github.com/jonas/tig.git
 TIG_TAG_PREFIX = tig-
