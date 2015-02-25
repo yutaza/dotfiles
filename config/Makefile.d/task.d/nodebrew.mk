@@ -1,5 +1,7 @@
 $(NODEBREW_DIR):
-	$(NODEBREW_INSTALL_COMMAND)
+	wget git.io/nodebrew
+	perl nodebrew setup
+	$(RM) nodebrew
 
 .PHONY: nodebrew-distclean
 nodebrew-distclean:
