@@ -8,6 +8,8 @@ INSTALL_TARGETS +=
 TEST_TARGETS +=
 UPDATE_TARGETS +=
 
+include $(MAKEFILE_DIR)/install.d/**/var.mk
+
 .PHONY: all
 all: $(BUILD_TARGETS)
 
@@ -28,3 +30,5 @@ install: $(INSTALL_TARGETS)
 
 .PHONY: update
 update: $(UPDATE_TARGETS)
+
+include $(MAKEFILE_DIR)/install.d/**/task.mk
