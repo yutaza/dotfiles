@@ -1,6 +1,5 @@
 VIM_EDITORCONFIG_DIR = $(VAR_DIR)/plugins/vim/editorconfig-vim
 
-#FIXME
 VIM_EDITORCONFIG_AUTOLOAD_DIR = $(VIM_EDITORCONFIG_DIR)/autoload
 VIM_EDITORCONFIG_PLUGIN_DIR = $(VIM_EDITORCONFIG_DIR)/plugin
 
@@ -18,8 +17,8 @@ else
     VIM_EDITORCONFIG_GIT_TAG = $(VIM_EDITORCONFIG_TAG_PREFIX)$(VIM_EDITORCONFIG_VERSION)$(VIM_EDITORCONFIG_TAG_SUFFIX)
 endif
 
-BUILD_TARGETS += vim_editorconfig-build
-CLEAN_TARGETS += vim_editorconfig-clean
-DISTCLEAN_TARGETS += vim_editorconfig-distclean
-INSTALL_TARGETS += vim_editorconfig-install
-UPDATE_TARGETS += vim_editorconfig-update
+BUILD_TARGETS += vim-editorconfig-build
+CLEAN_TARGETS += vim-editorconfig-clean
+DISTCLEAN_TARGETS += vim-editorconfig-distclean
+INSTALL_TARGETS += vim-editorconfig-install
+UPDATE_TARGETS += vim-editorconfig-update
