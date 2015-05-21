@@ -156,7 +156,7 @@ bind ^] paste [.]
 #
 # こっからは自分で追加
 #
-escape ^z^z
+escape ^a^a
 bind s colon 'screen ssh '
 #shelltitle '% |zsh'
 shelltitle '$ |bash'
