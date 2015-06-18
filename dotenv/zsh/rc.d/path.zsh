@@ -1,23 +1,14 @@
 path=(
     $HOME/bin(N-/)
-    $HOME/.dotfiles/var/ansible/bin(N-/)
-    $HOME/.dotfiles/var/homebrew/bin(N-/)
     $HOME/.dotfiles/var/plugins/git/tig/bin(N-/)
-    $HOME/.nodebrew/current/bin(N-/)
-    $HOME/.phpenv/bin(N-/)
-    $HOME/.pyenv/bin(N-/)
-    $HOME/.roswell/bin(N-/)
+    $HOME/.goenv/bin(N-/)
     /usr/local/bin(N-/)
     /usr/bin(N-/)
     ${^path}(N-/^W)
 )
 
-if hash phpenv 2>/dev/null; then
-    eval "$(phpenv init -)"
-fi
-
-if hash pyenv 2>/dev/null; then
-    eval "$(pyenv init -)"
+if hash goenv 2>/dev/null; then
+    eval "$(goenv init -)"
 fi
 
 typeset -U path PATH
