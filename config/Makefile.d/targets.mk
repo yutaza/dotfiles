@@ -22,9 +22,10 @@ clean: $(CLEAN_TARGETS)
 
 .PHONY: distclean
 distclean: $(DISTCLEAN_TARGETS)
+	rm -rf $(VAR_DIR)/*
 
 .PHONY: initialize
-build: $(INITIALIZE_TARGETS)
+initialize: $(INITIALIZE_TARGETS)
 
 .PHONY: install
 install: $(INSTALL_TARGETS)
