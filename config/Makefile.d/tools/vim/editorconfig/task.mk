@@ -1,5 +1,5 @@
 $(VIM_EDITORCONFIG_DIR):
-	git clone git://github.com/editorconfig/editorconfig-vim.git $@
+	git clone $(VIM_EDITORCONFIG_REPO) $@
 	mkdir -p $(VIM_AUTOLOAD_DIR)
 	mkdir -p $(VIM_PLUGIN_DIR)
 	cp -a $(VIM_EDITORCONFIG_DIR)/autoload/* $(VIM_AUTOLOAD_DIR)

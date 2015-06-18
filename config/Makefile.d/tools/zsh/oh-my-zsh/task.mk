@@ -1,5 +1,5 @@
 $(OH_MY_ZSH_DIR):
-	git clone git://github.com/robbyrussell/oh-my-zsh.git $@
+	git clone $(OH_MY_ZSH_REPO) $@
 
 .PHONY: oh-my-zsh-distclean
 oh-my-zsh-distclean:
