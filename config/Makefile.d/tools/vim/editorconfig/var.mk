@@ -1,24 +1,5 @@
 VIM_EDITORCONFIG_DIR = $(VAR_DIR)/plugins/vim/editorconfig-vim
 
-VIM_EDITORCONFIG_AUTOLOAD_DIR = $(VIM_EDITORCONFIG_DIR)/autoload
-VIM_EDITORCONFIG_PLUGIN_DIR = $(VIM_EDITORCONFIG_DIR)/plugin
-
-VIM_EDITORCONFIG_GIT_COMMAND = git --git-dir=$(VIM_EDITORCONFIG_DIR)/.git --work-tree=$(VIM_EDITORCONFIG_DIR)
-VIM_EDITORCONFIG_LAST_BUILD = $(VIM_EDITORCONFIG_DIR)/.editorconfig-last-build
-VIM_EDITORCONFIG_REPO = git://github.com/editorconfig/editorconfig-vim.git
-VIM_EDITORCONFIG_TAG_PREFIX = v
-VIM_EDITORCONFIG_TAG_SUFFIX =
-VIM_EDITORCONFIG_VAR_MK = $(CONFIG_DIR)/Makefile.d/tools/vim/editorconfig/var.mk
-VIM_EDITORCONFIG_VERSION = latest
-
-ifeq ($(VIM_EDITORCONFIG_VERSION), latest)
-    VIM_EDITORCONFIG_GIT_TAG = origin/HEAD
-else
-    VIM_EDITORCONFIG_GIT_TAG = $(VIM_EDITORCONFIG_TAG_PREFIX)$(VIM_EDITORCONFIG_VERSION)$(VIM_EDITORCONFIG_TAG_SUFFIX)
-endif
-
-BUILD_TARGETS += vim-editorconfig-build
-CLEAN_TARGETS += vim-editorconfig-clean
 DISTCLEAN_TARGETS += vim-editorconfig-distclean
 INSTALL_TARGETS += vim-editorconfig-install
 UPDATE_TARGETS += vim-editorconfig-update

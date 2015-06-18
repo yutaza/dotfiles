@@ -1,20 +1,9 @@
 $(VIM_EDITORCONFIG_DIR):
-	git clone $(VIM_EDITORCONFIG_REPO) $@
-
-$(VIM_EDITORCONFIG_LAST_BUILD): $(VIM_EDITORCONFIG_DIR) $(VIM_EDITORCONFIG_VAR_MK) $(VIM_AUTOLOAD_DIR) $(VIM_PLUGIN_DIR)
-	rm -rf $@
-	$(VIM_EDITORCONFIG_GIT_COMMAND) fetch -p
-	$(VIM_EDITORCONFIG_GIT_COMMAND) reset --hard $(VIM_EDITORCONFIG_GIT_TAG)
-	cp -a $(VIM_EDITORCONFIG_AUTOLOAD_DIR)/* $(VIM_AUTOLOAD_DIR)
-	cp -a $(VIM_EDITORCONFIG_PLUGIN_DIR)/* $(VIM_PLUGIN_DIR)
-	touch $@
-
-.PHONY: vim-editorconfig-build
-vim-editorconfig-build: $(VIM_EDITORCONFIG_LAST_BUILD)
-
-.PHONY: vim-editorconfig-clean
-vim-editorconfig-clean:
-	rm -rf $(VIM_EDITORCONFIG_LAST_BUILD)
+	git clone git://github.com/editorconfig/editorconfig-vim.git $@
+	mkdir -p $(VIM_AUTOLOAD_DIR)
+	mkdir -p $(VIM_PLUGIN_DIR)
+	cp -a $(VIM_EDITORCONFIG_DIR)/autoload/* $(VIM_AUTOLOAD_DIR)
+	cp -a $(VIM_EDITORCONFIG_DIR)/plugin/* $(VIM_PLUGIN_DIR)
 
 .PHONY: vim-editorconfig-distclean
 vim-editorconfig-distclean:
@@ -24,4 +13,7 @@ vim-editorconfig-distclean:
 vim-editorconfig-install: $(VIM_EDITORCONFIG_DIR)
 
 .PHONY: vim-editorconfig-update
-vim-editorconfig-update: vim-editorconfig-clean vim-editorconfig-build
+vim-editorconfig-update: $(VIM_EDITORCONFIG_DIR)
+	cd $< && git fetch -p && git pull
+	cp -a $(VIM_EDITORCONFIG_DIR)/autoload/* $(VIM_AUTOLOAD_DIR)
+	cp -a $(VIM_EDITORCONFIG_DIR)/plugin/* $(VIM_PLUGIN_DIR)
