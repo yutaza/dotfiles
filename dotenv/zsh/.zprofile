@@ -4,3 +4,10 @@ for f in $ZDOTDIR/profile.d/*; do
     source $f
   fi
 done
+
+# ~/.zprofile-local/* を読み込む
+for f in ~/.zprofile-local-local/*.zsh; do
+  if [ -f $f ]; then
+    source $f
+  fi
+done
