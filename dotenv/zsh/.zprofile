@@ -6,7 +6,7 @@ for f in $ZDOTDIR/profile.d/*; do
 done
 
 # ~/.zprofile-local/* を読み込む
-for f in ~/.zprofile-local-local/*.zsh; do
+for f in ~/.zprofile-local/*.zsh; do
     if [ -f $f ]; then
         source $f
     fi
