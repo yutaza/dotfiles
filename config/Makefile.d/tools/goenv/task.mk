@@ -1,5 +1,6 @@
 $(GOENV_DIR):
 	git clone $(GOENV_REPO) $@
+	mkdir -p $(GOENV_PACKAGES_DIR)/bin
 
 .PHONY: goenv-distclean
 goenv-distclean:
