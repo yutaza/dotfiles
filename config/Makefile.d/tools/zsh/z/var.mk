@@ -1,4 +1,4 @@
-Z_ZSH_DIR = $(VAR_DIR)/vendor/z
+Z_ZSH_DIR = $(DOTENV_DIR)/zsh/vendor/z
 Z_ZSH_REPO = git://github.com/rupa/z.git
 
 DISTCLEAN_TARGETS += z-zsh-distclean
