@@ -1,3 +1,6 @@
+DOTENV_ZSHRC_LOCAL = $(HOME)/.zshrc-local
+DOTENV_ZPROFILE_LOCAL = $(HOME)/.zprofile-local
+
 DOTENV_TARGETS = $(shell find $(DOTENV_DIR)/* -maxdepth 0 | sed 's!^.*/!!')
 
 dotenv_install_target = $(HOME)/.$(strip $(1))
