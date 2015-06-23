@@ -27,7 +27,5 @@ make distclean
 
 peco
 ```
-goenv install 1.4
-goenv global 1.4
-go get github.com/peco/peco/cmd/peco
+goenv install 1.4 && goenv global 1.4 && go get github.com/peco/peco/cmd/peco
 ```
