@@ -33,9 +33,9 @@
 :nnoremap <C-k>         <Up>
 :nnoremap <Esc><C-B>    <S-Left>
 :nnoremap <Esc><C-F>    <S-Right>
-:nnoremap <C-b><C-n>    :bn<ENTER>
-:nnoremap <C-b><C-p>    :bp<ENTER>
-:nnoremap <C-b><C-d>    :bd<ENTER>
+:nnoremap <C-n>         :bn<ENTER>
+:nnoremap <C-p>         :bp<ENTER>
+:nnoremap <C-d>         :bd<ENTER>
 
 :inoremap <C-a>         <Home>
 :inoremap <C-e>         <End>
