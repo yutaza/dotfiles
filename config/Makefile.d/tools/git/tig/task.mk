@@ -1,8 +1,10 @@
 $(TIG_DIR):
 	git clone $(TIG_REPO) $@
 	make --directory=$(TIG_DIR) distclean
-	make --directory=$(TIG_DIR) prefix=$(TIG_DIR)
-	make --directory=$(TIG_DIR) install prefix=$(TIG_DIR)
+	make --directory=$(TIG_DIR) configure
+	cd $(TIG_DIR) && ./configure --prefix=$(TIG_DIR)
+	make --directory=$(TIG_DIR)
+	make --directory=$(TIG_DIR)
 
 .PHONY: tig-distclean
 tig-distclean:
@@ -15,5 +17,7 @@ tig-install: $(TIG_DIR)
 tig-update: $(TIG_DIR)
 	cd $< && git fetch -p && git pull
 	make --directory=$(TIG_DIR) distclean
-	make --directory=$(TIG_DIR) prefix=$(TIG_DIR)
-	make --directory=$(TIG_DIR) install prefix=$(TIG_DIR)
+	make --directory=$(TIG_DIR) configure
+	cd $(TIG_DIR) && ./configure --prefix=$(TIG_DIR)
+	make --directory=$(TIG_DIR)
+	make --directory=$(TIG_DIR)
