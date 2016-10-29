@@ -3,17 +3,21 @@
 * 自分の開発環境をgit cloneしてmakeすれば、すぐに整う
 * tigやeditorconfigのアップデートを行える
 
-### 例
+インストール
+```
+bash -c "$(curl -L raw.githubusercontent.com/yutaza/dotfiles/master/install)"
+```
 
-初期設定
+シェル切り替え
 ```
-    % cd ~
-    % mkdir data
-    % git clone リポジトリ ~/data/dotfiles
-    % cd ~/data/dotfiles
-    % make
-    % chsh -s /bin/zsh
+chsh -s /bin/zsh
 ```
+
+go
+```
+goenv install 1.6 && goenv global 1.6 && go get github.com/peco/peco/cmd/peco && go get github.com/github/hub
+```
+
 
 アップデート
 ```
@@ -27,5 +31,4 @@ make distclean
 
 peco
 ```
-goenv install 1.4 && goenv global 1.4 && go get github.com/peco/peco/cmd/peco
 ```
