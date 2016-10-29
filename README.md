@@ -29,6 +29,3 @@ make update
 make distclean
 ```
 
-peco
-```
-```
