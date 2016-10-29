@@ -1,0 +1,16 @@
+#!/bin/bash
+
+mkdir -p ~/data
+cd ~/data
+git clone git@github.com:yutaza/dotfiles.git
+cd ~/data/dotfiles
+make
+
+source ~/.zsh/.zshenv
+
+goenv install 1.6 && goenv global 1.6
+go get github.com/peco/peco/cmd/peco
+go get github.com/github/hub
+
+chsh -s /bin/zsh
+
