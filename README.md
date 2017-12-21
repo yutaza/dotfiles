@@ -13,12 +13,6 @@ bash -c "$(curl -L raw.githubusercontent.com/yutaza/dotfiles/master/install)"
 chsh -s /bin/zsh
 ```
 
-go
-```
-goenv install 1.6 && goenv global 1.6 && go get github.com/peco/peco/cmd/peco && go get github.com/github/hub
-```
-
-
 アップデート
 ```
 make update
