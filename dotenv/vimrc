@@ -1,6 +1,7 @@
 " basic
 :set autoread
 :set wildmode=longest,list
+:set directory=~/.vim/tmp
 
 " color
 :syntax enable
