@@ -2,6 +2,7 @@
 :set autoread
 :set wildmode=longest,list
 :set directory=~/.vim/tmp
+:set hlsearch
 
 " color
 :syntax enable
