@@ -7,8 +7,3 @@ cd ~/data/dotfiles
 make
 
 source ~/.zsh/.zshenv
-
-goenv install 1.8 && goenv global 1.8
-go get github.com/peco/peco/cmd/peco
-go get github.com/github/hub
-go get github.com/direnv/direnv
