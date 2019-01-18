@@ -1,5 +1,5 @@
 RBENV_DIR = $(HOME)/.rbenv
-RBENV_INSTALLER = https://raw.githubusercontent.com/fesplugas/rbenv-installer/master/bin/rbenv-installer
+RBENV_REPO = git://github.com/rbenv/rbenv
 
 DISTCLEAN_TARGETS += rbenv-distclean
 INSTALL_TARGETS += rbenv-install

@@ -1,5 +1,5 @@
 $(RBENV_DIR):
-	curl $(RBENV_INSTALLER) | bash
+	git clone $(RBENV_REPO) $@
 
 .PHONY: rbenv-distclean
 rbenv-distclean:
@@ -10,4 +10,4 @@ rbenv-install: $(RBENV_DIR)
 
 .PHONY: rbenv-update
 rbenv-update: $(RBENV_DIR)
-	rbenv update
+	cd $< && git fetch -p && git pull
