@@ -1,9 +1,5 @@
 #!/bin/bash
-
-mkdir -p ~/data
-cd ~/data
 git clone git@github.com:yutaza/dotfiles.git
-cd ~/data/dotfiles
-make
+make   
 
 source ~/.zsh/.zshenv
