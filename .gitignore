@@ -1,3 +1,7 @@
+.DS_Store
 *.sw*
 .netrwhist
 var/*
+
+dotenv/zsh/.zsh_history
+dotenv/zsh/.zsh_sessions/*
