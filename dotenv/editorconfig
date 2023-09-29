@@ -32,3 +32,8 @@ max_line_width = 79
 indent_style   = space
 indent_size    = 4
 max_line_width = 79
+
+[*.yaml]
+indent_style   = space
+indent_size    = 2
+max_line_width = 79
